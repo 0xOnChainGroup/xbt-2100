@@ -57,6 +57,7 @@ export default function Home() {
                       fontSize: "140%",
                     }}
                   >
+                    <img style={{height:"105px"}} src="/xbt-sticker.png" alt="" />
                     XBT - 2100
                   </span>
                 </td>
