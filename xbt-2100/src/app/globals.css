@@ -1,5 +1,5 @@
 body {
-  cursor: url("../../public/idees_curseur_1_up32x32.png"), auto !important;
+  cursor: url("../../public/idees_curseur_1_up32x32.png") 16 16, auto !important;
 }
 button, a, input, textarea, select, *:hover, *:focus {
 	cursor: url("../../public/idees_curseur_1_up32x32.png"), auto !important;
@@ -225,6 +225,7 @@ body, td, th , tr
 /* The main body of the entire forum. */
 body
 {
+	overflow: hidden;
 	background-color: #E5E5E8;
 	margin: 0px;
 	padding: 12px 30px 4px 30px;

@@ -25,6 +25,9 @@ export default function Home() {
     if (isEnterClicked && videoRef.current) {
       videoRef.current.play();
     }
+    if(isEnterClicked) {
+      document.body.style.overflow = 'scroll';
+    }
   }, [isEnterClicked]);
   return (
     <>
