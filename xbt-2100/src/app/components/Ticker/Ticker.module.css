@@ -19,16 +19,30 @@
     width: 100%;
     /* display: flex; */
     overflow: hidden;
-    /* background-color: red; */
+    background-color: black;
 }
 .hero_ticker_img{
     height: 75px;
 }
+.hero_written_container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 .hero_scroll_content {
-    display: inline-block;
-    white-space: nowrap;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* white-space: nowrap; */
+    /* background-color: black !important; */
+    color: white;
+    font-family: "arcade";
+    position: relative;
 }
 .hero_scroll_content span{
-    
     margin: 0px 5px;
+    height: 79px !important;
+    /* background-color: red; */
+    /* background-color: black; */
 }

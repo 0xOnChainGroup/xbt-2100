@@ -295,7 +295,7 @@ export default function Home() {
                   >
                     <b>
                       <a
-                        href="https://bitcointalk.org/index.php"
+                        href=""
                         className="nav"
                       >
                         XBT 2100
@@ -309,7 +309,7 @@ export default function Home() {
           </table>
           <div className="tborder" style={{ marginTop: 0 }}>
             <div className="catbg" style={{ padding: "5px 5px 5px 10px" }}>
-              <a name="" href="/#">
+              <a name="" href="">
                 Token
               </a>
             </div>
@@ -330,7 +330,7 @@ export default function Home() {
                     align="center"
                     valign="top"
                   >
-                    <a href="https://bitcointalk.org/index.php?action=unread;board=1.0">
+                    <a href="">
                       <img
                         src="https://bitcointalk.org/Themes/custom1/images/off.gif"
                         alt="No New Posts"
@@ -341,7 +341,7 @@ export default function Home() {
                   <td className="windowbg2">
                     <b>
                       <a
-                        href="https://bitcointalk.org/index.php?board=1.0"
+                        href=""
                         name="b1"
                       >
                         XBT 2100
@@ -357,7 +357,7 @@ export default function Home() {
                       <i>
                         Moderator:{" "}
                         <a
-                          href="https://bitcointalk.org/index.php?action=profile;u=164822"
+                          href=""
                           title="Board Moderator"
                         >
                           Len Sassaman aka 'Satoshi Nakamoto'
@@ -379,13 +379,13 @@ export default function Home() {
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
                       <b>Last post</b> by{" "}
-                      <a href="https://bitcointalk.org/index.php?action=profile;u=1292764">
+                      <a href="">
                         tranthidung
                       </a>
                       <br />
                       in{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?topic=5512639.msg64636554#new"
+                        href=""
                         title="Re: Hiccups that can occur during Bitcoin investments."
                       >
                         Re: Hiccups that can occ...

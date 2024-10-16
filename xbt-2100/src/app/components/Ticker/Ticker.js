@@ -1,16 +1,16 @@
 import { useEffect, useRef } from "react";
-import style from "./Ticker.module.css"
+import style from "./Ticker.module.css";
 // import vitalikAvtar from "../../../public/assets/img/MEGA_Vitalik_avatar.png";
 // import vitalikDance from "../../../public/assets/img/vitalik_dance.webp";
 function Ticker() {
   const scrollRef = useRef(null);
   const items = [
-    "Important announcement!",
+    "$BTC -99%",
     {
       type: "image",
       src: "/xbt.png",
     },
-    "$XBT2100 up to 2100%",
+    "$XBT up to 2100%",
     {
       type: "image",
       src: "/buyvideo.gif",
@@ -73,14 +73,18 @@ function Ticker() {
       <div className={style.hero_ticker}>
         <div ref={scrollRef} className={style.hero_scroll_content}>
           {items.concat(items).map((item, index) => (
-            <span key={index} className="inline-block px-4 font-sans">
+            <span key={index} className="">
               {/* <img
                   className={style.hero_ticker_img}
                   src="/assets/img/vitalik-clapping.gif"
                   alt=""
                 /> */}
               {typeof item === "string" ? (
-                item
+                <>
+                  <div className={style.hero_written_container}>
+                    <div>{item}</div>
+                  </div>
+                </>
               ) : (
                 <img
                   className={style.hero_ticker_img}
