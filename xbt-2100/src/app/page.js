@@ -81,7 +81,7 @@ export default function Home() {
                       src="/xbt-sticker.png"
                       alt=""
                     />
-                    XBT - 2100
+                    {/* XBT - 2100 */}
                   </span>
                 </td>
                 <td align="right" className="catbg">
@@ -128,29 +128,6 @@ export default function Home() {
                     border="0"
                     style={{ marginTop: "1px" }}
                   >
-                    <thead>
-                      <tr>
-                        <td
-                          colSpan="2"
-                          width="100%"
-                          valign="top"
-                          className="windowbg2"
-                          id="variousheadlinks"
-                        >
-                          <span className="middletext">
-                            Welcome, <b>Anon</b>. Please{" "}
-                            <a href="https://bitcointalk.org/index.php?action=login">
-                              login
-                            </a>{" "}
-                            or{" "}
-                            <a href="https://bitcointalk.org/index.php?action=register">
-                              register
-                            </a>
-                            .{" "}
-                          </span>
-                        </td>
-                      </tr>
-                    </thead>
                   </table>
                 </td>
               </tr>
@@ -167,7 +144,7 @@ export default function Home() {
               <tr>
                 <td width="90%" className="titlebg2">
                   <span className="smalltext">
-                    <b>News</b>: Latest Bitcoin Core release:{" "}
+                    <b>News</b>: Latest XBT2100 Core release:{" "}
                     <a
                       className="ul"
                       href="https://bitcoincore.org/en/download/"
@@ -227,7 +204,7 @@ export default function Home() {
                             }
                             className="input-dropdown"
                           >
-                            <span className="input-message">Buy $SPX now</span>
+                            <span className="input-message">Buy $XBT mfer</span>
                             <img src="/dollar.gif" alt="dollar" />
                           </div>
                         )}
@@ -291,15 +268,15 @@ export default function Home() {
         <div className="video-container">
           <video
             ref={videoRef}
-            controls
+            
             autoPlay={false}
             loop
             preload="auto"
             playsInline
             //   poster=""
-            height="200px"
+            // height="60vh"
             src="we_are_so_fucking_back.mov"
-            style={{ width: "100%", height: "300px", objectFit: "cover" }}
+            style={{ width: "100%", height: "60vh", objectFit: "fill" }}
           ></video>
         </div>
         <Ticker />
@@ -425,28 +402,28 @@ export default function Home() {
                     <span className="smalltext">
                       <b>Child Boards</b>:{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=74.0"
+                        href=""
                         title="No New Posts (Topics: 2844, Posts: 62625)"
                       >
                         Legal
                       </a>
                       ,{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=77.0"
+                        href=""
                         title="No New Posts (Topics: 35087, Posts: 127920)"
                       >
                         Press
                       </a>
                       ,{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=86.0"
+                        href=""
                         title="No New Posts (Topics: 1891, Posts: 13013)"
                       >
                         Meetups
                       </a>
                       ,{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=87.0"
+                        href=""
                         title="No New Posts (Topics: 54, Posts: 129)"
                       >
                         Important Announcements
@@ -464,7 +441,7 @@ export default function Home() {
                     align="center"
                     valign="top"
                   >
-                    <a href="https://bitcointalk.org/index.php?action=unread;board=6.0">
+                    <a href="">
                       <img
                         src="https://bitcointalk.org/Themes/custom1/images/off.gif"
                         alt="No New Posts"
@@ -475,32 +452,29 @@ export default function Home() {
                   <td className="windowbg2">
                     <b>
                       <a
-                        href="https://bitcointalk.org/index.php?board=6.0"
+                        href=""
                         name="b6"
                       >
-                        Development &amp; Technical Discussion
+                        MT Gox announce 2100 listing soon!
                       </a>
                     </b>
                     <br />
-                    Technical discussion about Satoshi's Bitcoin client and the
-                    Bitcoin network in general. No third-party sites/clients,
-                    bug reports that do not require much discussion (use
-                    github), or support requests.
+                    One of the strongest and most reliable crypto exchange announced in presence of Donald Trump, they will list XBT2100.
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderators:{" "}
                         <a
-                          href="https://bitcointalk.org/index.php?action=profile;u=11425"
+                          href=""
                           title="Board Moderator"
                         >
-                          gmaxwell
+                          Karpelès
                         </a>
                         ,{" "}
                         <a
-                          href="https://bitcointalk.org/index.php?action=profile;u=290195"
+                          href=""
                           title="Board Moderator"
                         >
-                          achow101
+                          Trump
                         </a>
                       </i>
                     </div>
@@ -519,19 +493,19 @@ export default function Home() {
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
                       <b>Last post</b> by{" "}
-                      <a href="https://bitcointalk.org/index.php?action=profile;u=3660289">
+                      <a href="">
                         rionika
                       </a>
                       <br />
                       in{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?topic=5511630.msg64636554#new"
+                        href=""
                         title="Re: AboutFull rbf "
                       >
                         Re: AboutFull rbf{" "}
                       </a>
                       <br />
-                      on <b>Today</b> at 12:48:29 PM
+                      on <b>February 7th 2014</b> at 12:48:29 PM
                     </span>
                   </td>
                 </tr>
@@ -542,7 +516,7 @@ export default function Home() {
                     <span className="smalltext">
                       <b>Child Boards</b>:{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=37.0"
+                        href=""
                         title="No New Posts (Topics: 12290, Posts: 153355)"
                       >
                         Wallet software
@@ -560,7 +534,7 @@ export default function Home() {
                     align="center"
                     valign="top"
                   >
-                    <a href="https://bitcointalk.org/index.php?action=unread;board=14.0">
+                    <a href="">
                       <img
                         src="https://bitcointalk.org/Themes/custom1/images/off.gif"
                         alt="No New Posts"
@@ -571,10 +545,10 @@ export default function Home() {
                   <td className="windowbg2">
                     <b>
                       <a
-                        href="https://bitcointalk.org/index.php?board=14.0"
+                        href=""
                         name="b14"
                       >
-                        Mining
+                        $XBT legal tender in USA ?? Gary gensler 
                       </a>
                     </b>
                     <br />
@@ -583,7 +557,7 @@ export default function Home() {
                       <i>
                         Moderator:{" "}
                         <a
-                          href="https://bitcointalk.org/index.php?action=profile;u=11425"
+                          href=""
                           title="Board Moderator"
                         >
                           gmaxwell
@@ -605,13 +579,13 @@ export default function Home() {
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
                       <b>Last post</b> by{" "}
-                      <a href="https://bitcointalk.org/index.php?action=profile;u=1606712">
+                      <a href="">
                         _oh_no_stop_this_
                       </a>
                       <br />
                       in{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?topic=5512924.msg64636554#new"
+                        href=""
                         title="Re: Discovering Kyrgyzstan"
                       >
                         Re: Discovering Kyrgyzst...
@@ -628,35 +602,35 @@ export default function Home() {
                     <span className="smalltext">
                       <b>Child Boards</b>:{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=40.0"
+                        href=""
                         title="No New Posts (Topics: 7430, Posts: 60511)"
                       >
                         Mining support
                       </a>
                       ,{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=41.0"
+                        href=""
                         title="No New Posts (Topics: 2085, Posts: 213971)"
                       >
                         Pools
                       </a>
                       ,{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=42.0"
+                        href=""
                         title="No New Posts (Topics: 1640, Posts: 61324)"
                       >
                         Mining software (miners)
                       </a>
                       ,{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=76.0"
+                        href=""
                         title="No New Posts (Topics: 6826, Posts: 467712)"
                       >
                         Hardware
                       </a>
                       ,{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?board=81.0"
+                        href=""
                         title="No New Posts (Topics: 3781, Posts: 76520)"
                       >
                         Mining speculation
@@ -673,7 +647,7 @@ export default function Home() {
                     align="center"
                     valign="top"
                   >
-                    <a href="https://bitcointalk.org/index.php?action=unread;board=4.0">
+                    <a href="">
                       <img
                         src="https://bitcointalk.org/Themes/custom1/images/off.gif"
                         alt="No New Posts"
@@ -684,7 +658,7 @@ export default function Home() {
                   <td className="windowbg2">
                     <b>
                       <a
-                        href="https://bitcointalk.org/index.php?board=4.0"
+                        href=""
                         name="b4"
                       >
                         Bitcoin Technical Support
@@ -697,7 +671,7 @@ export default function Home() {
                       <i>
                         Moderator:{" "}
                         <a
-                          href="https://bitcointalk.org/index.php?action=profile;u=290195"
+                          href=""
                           title="Board Moderator"
                         >
                           achow101
@@ -719,13 +693,13 @@ export default function Home() {
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
                       <b>Last post</b> by{" "}
-                      <a href="https://bitcointalk.org/index.php?action=profile;u=459836">
+                      <a href="">
                         LoyceV
                       </a>
                       <br />
                       in{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?topic=5512958.msg64636554#new"
+                        href=""
                         title="Re: Some 24-word mnemonics recovered from csv file return an invalid checksum"
                       >
                         Re: Some 24-word mnemoni...
@@ -744,7 +718,7 @@ export default function Home() {
                     align="center"
                     valign="top"
                   >
-                    <a href="https://bitcointalk.org/index.php?action=unread;board=12.0">
+                    <a href="">
                       <img
                         src="https://bitcointalk.org/Themes/custom1/images/off.gif"
                         alt="No New Posts"
@@ -755,7 +729,7 @@ export default function Home() {
                   <td className="windowbg2">
                     <b>
                       <a
-                        href="https://bitcointalk.org/index.php?board=12.0"
+                        href=""
                         name="b12"
                       >
                         Project Development
@@ -779,13 +753,13 @@ export default function Home() {
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
                       <b>Last post</b> by{" "}
-                      <a href="https://bitcointalk.org/index.php?action=profile;u=3660280">
+                      <a href="">
                         CryptoSwapTraiding
                       </a>
                       <br />
                       in{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?topic=5513301.msg64636554#new"
+                        href=""
                         title="We are recruiting staff for the Swap Trading team"
                       >
                         We are recruiting staff ...
@@ -801,7 +775,7 @@ export default function Home() {
 
           <div className="tborder" style={{ marginTop: "1ex" }}>
             <div className="catbg" style={{ padding: "5px 5px 5px 10px" }}>
-              <a name="6" href="https://bitcointalk.org/index.php#6">
+              <a name="6" href="">
                 Alternate cryptocurrencies
               </a>
             </div>
@@ -821,7 +795,7 @@ export default function Home() {
                     align="center"
                     valign="top"
                   >
-                    <a href="https://bitcointalk.org/index.php?action=unread;board=67.0">
+                    <a href="">
                       <img
                         src="https://bitcointalk.org/Themes/custom1/images/off.gif"
                         alt="No New Posts"
@@ -832,7 +806,7 @@ export default function Home() {
                   <td className="windowbg2">
                     <b>
                       <a
-                        href="https://bitcointalk.org/index.php?board=67.0"
+                        href=""
                         name="b67"
                       >
                         Altcoin Discussion
@@ -846,7 +820,7 @@ export default function Home() {
                       <i>
                         Moderator:{" "}
                         <a
-                          href="https://bitcointalk.org/index.php?action=profile;u=51173"
+                          href=""
                           title="Board Moderator"
                         >
                           mprep
@@ -868,13 +842,13 @@ export default function Home() {
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
                       <b>Last post</b> by{" "}
-                      <a href="https://bitcointalk.org/index.php?action=profile;u=3491360">
+                      <a href="">
                         EarnOnVictor
                       </a>
                       <br />
                       in{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?topic=5512822.msg64636554#new"
+                        href=""
                         title="Re: What qualifies an animal to be a MEME coin mascot"
                       >
                         Re: What qualifies an an...
@@ -894,7 +868,7 @@ export default function Home() {
                     align="center"
                     valign="top"
                   >
-                    <a href="https://bitcointalk.org/index.php?action=unread;board=159.0">
+                    <a href="">
                       <img
                         src="https://bitcointalk.org/Themes/custom1/images/off.gif"
                         alt="No New Posts"
@@ -905,7 +879,7 @@ export default function Home() {
                   <td className="windowbg2">
                     <b>
                       <a
-                        href="https://bitcointalk.org/index.php?board=159.0"
+                        href=""
                         name="b159"
                       >
                         Announcements (Altcoins)
@@ -917,14 +891,14 @@ export default function Home() {
                       <i>
                         Moderators:{" "}
                         <a
-                          href="https://bitcointalk.org/index.php?action=profile;u=51173"
+                          href=""
                           title="Board Moderator"
                         >
                           mprep
                         </a>
                         ,{" "}
                         <a
-                          href="https://bitcointalk.org/index.php?action=profile;u=84521"
+                          href=""
                           title="Board Moderator"
                         >
                           Welsh
@@ -946,13 +920,13 @@ export default function Home() {
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
                       <b>Last post</b> by{" "}
-                      <a href="https://bitcointalk.org/index.php?action=profile;u=3622868">
+                      <a href="">
                         EPoolMining
                       </a>
                       <br />
                       in{" "}
                       <a
-                        href="https://bitcointalk.org/index.php?topic=5510227.msg64636554#new"
+                        href=""
                         title="Re: [ANN] [PoW] BetGenius - Bet Smarter, Win Bigger with Crypto! [COIN]"
                       >
                         Re: [ANN] [PoW] BetGeniu...
