@@ -818,3 +818,45 @@ img.unloaded[alt=""]{background-image:url("/Themes/throb.gif"); background-repea
 .utusers a:link {color:gray;font-style:italic;}
 .utusers a:visited {color:gray;}
 .utusers a:hover {text-decoration:none;color:gray;}
+
+
+
+/* Modification */
+
+.input-container{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+
+	background-color: red;
+}
+
+.input-container input{
+	/* position: absolute; */
+	/* left: 0px;
+	top: 0px; */
+}
+.input-dropdown{
+	width: 100%;
+	background-color: white;
+	z-index: 2;
+	height: 21px;
+	border: 1px solid #9BAEBF;
+	position: absolute;
+	/* top: 2px; */
+}
+.input-dropdown img{
+	height: 18px;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+.input-message{
+	position: absolute;
+	left: 0px;
+	padding-left: 5px ;
+	font-size: 11px;
+	font-style: italic;
+}
+.input-dropdown:hover{
+background-color: #ECEDF3;
+}

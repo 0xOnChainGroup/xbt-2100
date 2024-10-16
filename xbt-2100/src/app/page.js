@@ -9,7 +9,10 @@ import Image from "next/image";
 import Ticker from "./components/Ticker/Ticker";
 export default function Home() {
   const [isEnterClicked, setIsEnterClicked] = useState();
+  const [isInputClicked, setIsInputClicked] = useState(false);
   const audioRef = useRef(null);
+  const inputRef = useRef(null);
+  const dropdownRef = useRef(null);
   const { positions } = useCustomCursor();
   const videoRef = useRef(null);
   function handleEnterClick() {
@@ -17,18 +20,34 @@ export default function Home() {
   }
   const togglePlayPause = () => {
     if (audioRef.current) {
-      audioRef.current.currentTime = 0; 
-      audioRef.current.play(); 
+      audioRef.current.currentTime = 0;
+      audioRef.current.play();
     }
   };
+  function handleInputClick() {
+    setIsInputClicked(!isInputClicked);
+  }
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target) && inputRef.current && !inputRef.current.contains(event.target)) {
+      setIsInputClicked(false);
+    }
+  };
+
   useEffect(() => {
     if (isEnterClicked && videoRef.current) {
       videoRef.current.play();
     }
-    if(isEnterClicked) {
-      document.body.style.overflow = 'scroll';
+    if (isEnterClicked) {
+      document.body.style.overflow = "scroll";
     }
   }, [isEnterClicked]);
+  
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <>
       <Modal
@@ -57,7 +76,11 @@ export default function Home() {
                       fontSize: "140%",
                     }}
                   >
-                    <img style={{height:"105px"}} src="/xbt-sticker.png" alt="" />
+                    <img
+                      style={{ height: "105px" }}
+                      src="/xbt-sticker.png"
+                      alt=""
+                    />
                     XBT - 2100
                   </span>
                 </td>
@@ -181,13 +204,35 @@ export default function Home() {
                         alt=""
                       />
                     </a>
-                    <input
-                      readOnly
-                      type="text"
-                      name="search"
-                      value=""
-                      style={{ width: "190px" }}
-                    />
+                    <div className="input-container">
+                      <div className="input-wrap">
+                        <input
+                          id="main-input"
+                          ref={inputRef}
+                          readOnly
+                          type="text"
+                          name="search"
+                          value=""
+                          style={{ width: "190px" }}
+                          onClick={handleInputClick}
+                        />
+                        {isInputClicked && ( 
+                          <div
+                            ref={dropdownRef}
+                            onClick={() =>
+                              window.open(
+                                "https://dexscreener.com/eth/",
+                                "_blank"
+                              )
+                            }
+                            className="input-dropdown"
+                          >
+                            <span className="input-message">Buy $SPX now</span>
+                            <img src="/dollar.gif" alt="dollar" />
+                          </div>
+                        )}
+                      </div>
+                    </div>
                     &nbsp;
                     {/* <input
 					readOnly
