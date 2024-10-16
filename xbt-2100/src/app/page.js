@@ -264,8 +264,8 @@ export default function Home() {
           </table>
           <div className="tborder" style={{ marginTop: 0 }}>
             <div className="catbg" style={{ padding: "5px 5px 5px 10px" }}>
-              <a name="1" href="https://bitcointalk.org/index.php#1">
-                Bitcoin
+              <a name="" href="/#">
+                Token
               </a>
             </div>
             <table
@@ -299,7 +299,7 @@ export default function Home() {
                         href="https://bitcointalk.org/index.php?board=1.0"
                         name="b1"
                       >
-                        Bitcoin Discussion
+                        XBT 2100
                       </a>
                     </b>
                     <br />
@@ -315,7 +315,7 @@ export default function Home() {
                           href="https://bitcointalk.org/index.php?action=profile;u=164822"
                           title="Board Moderator"
                         >
-                          hilariousandco
+                          Len Sassaman aka 'Satoshi Nakamoto'
                         </a>
                       </i>
                     </div>
