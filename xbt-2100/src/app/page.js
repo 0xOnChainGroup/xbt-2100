@@ -2,15 +2,28 @@
 import Modal from "./components/Modal/Modal";
 import styles from "./page.module.css";
 import { useState, useRef, useEffect } from "react";
+import MediaPlayer from "./components/MediaPlayer/MediaPlayer";
+import Bitcoinlogo from "../../public/firstbitcoinlogo.png";
+import { useCustomCursor } from "../../hooks/useCustomCursor";
+import Image from "next/image";
+import Ticker from "./components/Ticker/Ticker";
 export default function Home() {
   const [isEnterClicked, setIsEnterClicked] = useState();
+  const audioRef = useRef(null);
+  const { positions } = useCustomCursor();
   const videoRef = useRef(null);
   function handleEnterClick() {
     setIsEnterClicked(true);
   }
+  const togglePlayPause = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0; 
+      audioRef.current.play(); 
+    }
+  };
   useEffect(() => {
     if (isEnterClicked && videoRef.current) {
-      videoRef.current.play(); // Joue la vidéo si isEnterClicked est true
+      videoRef.current.play();
     }
   }, [isEnterClicked]);
   return (
@@ -22,6 +35,7 @@ export default function Home() {
       <div
         style={isEnterClicked ? { overflow: "scroll" } : { overflow: "hidden" }}
         className={styles.page}
+        onClick={togglePlayPause}
       >
         <div className="tborder">
           <table
@@ -62,7 +76,7 @@ export default function Home() {
                   </span>
                   <a
                     href="#"
-                    onclick="shrinkHeader(!current_header); return false;"
+                    // onClick="shrinkHeader(!current_header); return false;"
                   >
                     <img
                       id="upshrink"
@@ -97,7 +111,7 @@ export default function Home() {
                           id="variousheadlinks"
                         >
                           <span className="middletext">
-                            Welcome, <b>Guest</b>. Please{" "}
+                            Welcome, <b>Anon</b>. Please{" "}
                             <a href="https://bitcointalk.org/index.php?action=login">
                               login
                             </a>{" "}
@@ -164,19 +178,22 @@ export default function Home() {
                       />
                     </a>
                     <input
+                      readOnly
                       type="text"
                       name="search"
                       value=""
                       style={{ width: "190px" }}
                     />
                     &nbsp;
-                    <input
+                    {/* <input
+					readOnly
                       type="submit"
                       name="submit"
-                      value="Search"
+                      value=""
                       style={{ width: "11ex" }}
-                    />
-                    <input type="hidden" name="advanced" value="0" />
+                    /> */}
+                    <button onClick={(e) => e.preventDefault()}>Search</button>
+                    <input readOnly type="hidden" name="advanced" value="" />
                   </form>
                 </td>
               </tr>
@@ -224,7 +241,7 @@ export default function Home() {
         </table>
         <div className="video-container">
           <video
-		  ref={videoRef}
+            ref={videoRef}
             controls
             autoPlay={false}
             loop
@@ -233,8 +250,10 @@ export default function Home() {
             //   poster=""
             height="200px"
             src="we_are_so_fucking_back.mov"
+            style={{ width: "100%", height: "300px", objectFit: "cover" }}
           ></video>
         </div>
+        <Ticker />
         <div id="bodyarea" style={{ padding: "1ex 0px 2ex 0px" }}>
           <table width="100%" cellPadding="0" cellSpacing="0">
             <thead>
@@ -1187,7 +1206,7 @@ export default function Home() {
             >
               <a
                 href="#"
-                onclick="shrinkHeaderIC(!current_header_ic); return false;"
+                // onClick="shrinkHeaderIC(!current_header_ic); return false;"
               >
                 <img
                   id="upshrink_ic"
@@ -1467,8 +1486,8 @@ export default function Home() {
                       width="54"
                       height="20"
                       style={{ margin: "5px 16px" }}
-                      onmouseover="smfFooterHighlight(this, true);"
-                      onmouseout="smfFooterHighlight(this, false);"
+                      //   onmouseover="smfFooterHighlight(this, true);"
+                      //   onmouseout="smfFooterHighlight(this, false);"
                     />
                   </a>
                   <a href="http://www.php.net/" target="_blank">
@@ -1479,8 +1498,8 @@ export default function Home() {
                       width="54"
                       height="20"
                       style={{ margin: "5px 16px" }}
-                      onmouseover="smfFooterHighlight(this, true);"
-                      onmouseout="smfFooterHighlight(this, false);"
+                      //   onmouseover="smfFooterHighlight(this, true);"
+                      //   onmouseout="smfFooterHighlight(this, false);"
                     />
                   </a>
                 </td>
@@ -1526,8 +1545,8 @@ export default function Home() {
                       width="54"
                       height="20"
                       style={{ margin: "5px 16px;" }}
-                      onmouseover="smfFooterHighlight(this, true);"
-                      onmouseout="smfFooterHighlight(this, false);"
+                      //   onmouseover="smfFooterHighlight(this, true);"
+                      //   onmouseout="smfFooterHighlight(this, false);"
                     />
                   </a>
                   <a
@@ -1541,8 +1560,8 @@ export default function Home() {
                       width="54"
                       height="20"
                       style={{ margin: "5px 16px;" }}
-                      onmouseover="smfFooterHighlight(this, true);"
-                      onmouseout="smfFooterHighlight(this, false);"
+                      //   onmouseover="smfFooterHighlight(this, true);"
+                      //   onmouseout="smfFooterHighlight(this, false);"
                     />
                   </a>
                 </td>
@@ -1551,6 +1570,22 @@ export default function Home() {
           </table>
         </div>
       </div>
+      {positions.map((pos) => (
+        <Image
+          key={pos.id}
+          src={Bitcoinlogo}
+          alt="Trail of cursor"
+          className={`falling-image ${pos.type}-${pos.direction}`}
+          style={{
+            left: `${pos.x}px`,
+            top: `${pos.y}px`,
+            "--rand": pos.rand,
+            "--rand-x": pos.randX,
+            "--rand-y": pos.randY,
+          }}
+        />
+      ))}
+      <MediaPlayer audioRef={audioRef} togglePlayPause={togglePlayPause} />
     </>
   );
 }
