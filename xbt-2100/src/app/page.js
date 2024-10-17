@@ -313,18 +313,21 @@ export default function Home() {
             </tr>
           </thead>
         </table>
-        {/* <div className="hero-container">
-          <div className="hero-left-column-container">
-            <div className="hero-left-column-top"></div>
-            <div className="hero-left-column-bottom"></div>
-          </div> */}
         <div className="video-container">
           <div className="hero-left-column-container">
             <div className="hero-left-column-top">
-              <SideBlog />
+              <table>
+                <thead>
+                  <SideBlog />
+                </thead>
+              </table>
             </div>
             <div className="hero-left-column-bottom">
-              <SideBlog />
+              <table>
+                <thead>
+                  <SideBlog />
+                </thead>
+              </table>
             </div>
           </div>
           <video
@@ -336,22 +339,30 @@ export default function Home() {
             //   poster=""
             // height="60vh"
             src="we_are_so_fucking_back.mov"
-            style={{ width: "80%", height: "60vh", objectFit: "fill", marginTop:"5px" }}
+            style={{
+              width: "80%",
+              height: "60vh",
+              objectFit: "fill",
+              marginTop: "5px",
+            }}
           ></video>
           <div className="hero-right-column-container">
             <div className="hero-right-column-top">
-              <SideBlog />
+              <table>
+                <thead>
+                  <SideBlog />
+                </thead>
+              </table>
             </div>
             <div className="hero-right-column-bottom">
-              <SideBlog />
+              <table>
+                <thead>
+                  <SideBlog />
+                </thead>
+              </table>
             </div>
           </div>
         </div>
-        {/* <div className="hero-right-column-container">
-            <div className="hero-right-column-top"></div>
-            <div className="hero-right-column-bottom"></div>
-          </div>
-        </div> */}
         <Ticker />
         <div id="bodyarea" style={{ padding: "1ex 0px 2ex 0px" }}>
           <table width="100%" cellPadding="0" cellSpacing="0">
@@ -515,8 +526,7 @@ export default function Home() {
                     </b>
                     <br />
                     One of the strongest and most reliable crypto exchange
-                    announced in presence of Donald Trump, they will list
-                    $XBT.
+                    announced in presence of Donald Trump, they will list $XBT.
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderators:{" "}

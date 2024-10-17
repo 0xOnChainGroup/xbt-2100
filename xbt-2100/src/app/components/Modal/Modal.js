@@ -18,8 +18,8 @@ function Modal({ handleEnterClick, isEnterClicked }) {
             Do you accept the truth?
           </div>
           <div className={style.modal_buttons_container}>
-            <button onClick={handleEnterClick}>yes</button>
-            <button onClick={handleEnterClick}>yes</button>
+            <button onClick={handleEnterClick}>YES</button>
+            <button onClick={handleEnterClick}>NO <p>(YES)</p></button>
           </div>
           <div className={style.modal_gif_container}>
             <Image src={gif} alt="buyvideo" />
