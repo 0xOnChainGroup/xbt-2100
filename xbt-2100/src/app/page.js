@@ -175,6 +175,24 @@ export default function Home() {
                     </div>
                   </div>
                 </td>
+
+                <td className="catbg">
+                  <div
+                    onClick={handleMuteClick}
+                    className="mute-button-container"
+                  >
+                    {isMuteClicked ? (
+                      <>
+                      <img src="sound-off.png" alt="mute sound" />
+                      </>
+                    ) : (
+                      <>
+                        <img src="sound-on.png" alt="mute sound" />
+                      </>
+                    )}
+                  </div>
+                </td>
+
                 <td align="right" className="catbg">
                   <img
                     src="https://bitcointalk.org/Themes/custom1/images/smflogo.gif"
@@ -311,36 +329,37 @@ export default function Home() {
           </thead>
         </table>
         <div className="video-container">
-          <div className="hero-left-column-container">
+          {/* <div className="hero-left-column-container">
             <div className="hero-left-column-top">
               <SideBlog />
             </div>
             <div className="hero-left-column-bottom">
               <SideBlog />
             </div>
-          </div>
+          </div> */}
           <video
             ref={videoRef}
             autoPlay={false}
+            muted={isMuteClicked}
             loop
             preload="auto"
             playsInline
             src="we_are_so_fucking_back.mov"
           ></video>
-          <div className="hero-right-column-container">
+          {/* <div className="hero-right-column-container">
             <div className="hero-right-column-top">
               <SideBlog />
             </div>
             <div className="hero-right-column-bottom">
               <SideBlog />
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="sideblog-container-responsive">
+        {/* <div className="sideblog-container-responsive">
           <SideBlog />
           <SideBlog />
           <SideBlog />
-        </div>
+        </div> */}
         <Ticker />
         <div id="bodyarea" style={{ padding: "1ex 0px 2ex 0px" }}>
           <table width="100%" cellPadding="0" cellSpacing="0">
@@ -585,9 +604,9 @@ export default function Home() {
                     Generating bitcoins.
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
-                        Moderator:{" "}
+                        Moderators:{" "}
                         <a href="" title="Board Moderator">
-                          gmaxwell
+                          FED, SEC
                         </a>
                       </i>
                     </div>
@@ -764,7 +783,7 @@ export default function Home() {
                       valign="middle"
                       align="center"
                     >
-                      <a href="https://bitcointalk.org/index.php?action=recent">
+                      <a href="">
                         <img
                           src="https://bitcointalk.org/Themes/custom1/images/post/xx.gif"
                           alt="Recent Posts"
@@ -782,18 +801,18 @@ export default function Home() {
                           <tr>
                             <td className="middletext" valign="top">
                               <b>
-                                <a href="https://bitcointalk.org/index.php?topic=5512777.msg64636544;topicseen#msg64636544">
+                                <a href="">
                                   Re: &#128373;&#127995;&#8205;&#9794;&#65039;
                                   [BOUNTY DETECTIVE] &#128309; Neuton - 1500
                                   USDT REWARD POOL&#128309;
                                 </a>
                               </b>{" "}
                               by{" "}
-                              <a href="https://bitcointalk.org/index.php?action=profile;u=3482385">
+                              <a href="">
                                 Herison77
                               </a>{" "}
                               (
-                              <a href="https://bitcointalk.org/index.php?board=238.0">
+                              <a href="">
                                 Bounties (Altcoins)
                               </a>
                               )
@@ -812,16 +831,16 @@ export default function Home() {
                           <tr>
                             <td className="middletext" valign="top">
                               <b>
-                                <a href="https://bitcointalk.org/index.php?topic=5512816.msg64636543;topicseen#msg64636543">
+                                <a href="">
                                   Re: Curiosity made me ask.
                                 </a>
                               </b>{" "}
                               by{" "}
-                              <a href="https://bitcointalk.org/index.php?action=profile;u=2789534">
+                              <a href="">
                                 Apocollapse
                               </a>{" "}
                               (
-                              <a href="https://bitcointalk.org/index.php?board=57.0">
+                              <a href="">
                                 Speculation
                               </a>
                               )
@@ -840,16 +859,16 @@ export default function Home() {
                           <tr>
                             <td className="middletext" valign="top">
                               <b>
-                                <a href="https://bitcointalk.org/index.php?topic=5474882.msg64636542;topicseen#msg64636542">
+                                <a href="">
                                   Re: League and Domestic Cricket discussion{" "}
                                 </a>
                               </b>{" "}
                               by{" "}
-                              <a href="https://bitcointalk.org/index.php?action=profile;u=3548693">
+                              <a href="">
                                 Nalain420
                               </a>{" "}
                               (
-                              <a href="https://bitcointalk.org/index.php?board=228.0">
+                              <a href="">
                                 Gambling discussion
                               </a>
                               )
@@ -868,17 +887,17 @@ export default function Home() {
                           <tr>
                             <td className="middletext" valign="top">
                               <b>
-                                <a href="https://bitcointalk.org/index.php?topic=5466185.msg64636541;topicseen#msg64636541">
+                                <a href="">
                                   Re: Why gambling beginners must not joke with
                                   casino announcement{" "}
                                 </a>
                               </b>{" "}
                               by{" "}
-                              <a href="https://bitcointalk.org/index.php?action=profile;u=257653">
+                              <a href="">
                                 vs2014
                               </a>{" "}
                               (
-                              <a href="https://bitcointalk.org/index.php?board=228.0">
+                              <a href="">
                                 Gambling discussion
                               </a>
                               )
@@ -1024,7 +1043,7 @@ export default function Home() {
                     }}
                   >
                     <a
-                      href="http://www.simplemachines.org/"
+                      href=""
                       title="Simple Machines Forum"
                       target="_blank"
                     >
@@ -1032,7 +1051,7 @@ export default function Home() {
                     </a>{" "}
                     |
                     <a
-                      href="http://www.simplemachines.org/about/copyright.php"
+                      href=""
                       title="Free Forum Software"
                       target="_blank"
                     >
