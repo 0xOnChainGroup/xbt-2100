@@ -11,6 +11,7 @@ import SideBlog from "./components/SideBlog/SideBlog";
 export default function Home() {
   const [isEnterClicked, setIsEnterClicked] = useState();
   const [isInputClicked, setIsInputClicked] = useState(false);
+  const [isMuteClicked, setIsMuteClicked] = useState();
   const [isDragging, setIsDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const socialsRef = useRef(null);
@@ -28,6 +29,9 @@ export default function Home() {
       audioRef.current.play();
     }
   };
+  function handleMuteClick() {
+    setIsMuteClicked(!isMuteClicked);
+  }
   function handleInputClick() {
     setIsInputClicked(!isInputClicked);
   }
@@ -259,13 +263,6 @@ export default function Home() {
                       </div>
                     </div>
                     &nbsp;
-                    {/* <input
-					readOnly
-                      type="submit"
-                      name="submit"
-                      value=""
-                      style={{ width: "11ex" }}
-                    /> */}
                     <button onClick={(e) => e.preventDefault()}>Search</button>
                     <input readOnly type="hidden" name="advanced" value="" />
                   </form>
@@ -316,18 +313,10 @@ export default function Home() {
         <div className="video-container">
           <div className="hero-left-column-container">
             <div className="hero-left-column-top">
-              <table>
-                <thead>
-                  <SideBlog />
-                </thead>
-              </table>
+              <SideBlog />
             </div>
             <div className="hero-left-column-bottom">
-              <table>
-                <thead>
-                  <SideBlog />
-                </thead>
-              </table>
+              <SideBlog />
             </div>
           </div>
           <video
@@ -336,32 +325,21 @@ export default function Home() {
             loop
             preload="auto"
             playsInline
-            //   poster=""
-            // height="60vh"
             src="we_are_so_fucking_back.mov"
-            style={{
-              width: "80%",
-              height: "60vh",
-              objectFit: "fill",
-              marginTop: "5px",
-            }}
           ></video>
           <div className="hero-right-column-container">
             <div className="hero-right-column-top">
-              <table>
-                <thead>
-                  <SideBlog />
-                </thead>
-              </table>
+              <SideBlog />
             </div>
             <div className="hero-right-column-bottom">
-              <table>
-                <thead>
-                  <SideBlog />
-                </thead>
-              </table>
+              <SideBlog />
             </div>
           </div>
+        </div>
+        <div className="sideblog-container-responsive">
+          <SideBlog />
+          <SideBlog />
+          <SideBlog />
         </div>
         <Ticker />
         <div id="bodyarea" style={{ padding: "1ex 0px 2ex 0px" }}>
@@ -600,7 +578,7 @@ export default function Home() {
                   <td className="windowbg2">
                     <b>
                       <a href="" name="b14">
-                        $XBT legal tender in USA ?? Gary gensler
+                        $XBT legal tender in USA?? Gary gensler
                       </a>
                     </b>
                     <br />
