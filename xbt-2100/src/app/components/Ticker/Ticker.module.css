@@ -28,6 +28,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: 18px;
 }
 .hero_scroll_content {
     /* display: inline-block; */

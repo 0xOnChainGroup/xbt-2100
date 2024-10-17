@@ -8,7 +8,7 @@ function Ticker() {
     "$BTC -99%",
     {
       type: "image",
-      src: "/xbt.png",
+      src: "/inithforthetech.png.png",
     },
     "$XBT +2100%",
     {
@@ -18,29 +18,29 @@ function Ticker() {
     "$XBT +2100%",
     {
       type: "image",
-      src: "/xbt.png",
+      src: "/shrek.png",
     },
     "$XBT +2100%",
     {
       type: "image",
       src: "/buyvideo.gif",
     },
-    "Important announcement!",
+    "$ETH -147%",
     {
       type: "image",
-      src: "/xbt.png",
+      src: "/inithforthetech.png",
     },
     "$XBT +2100%",
     {
       type: "image",
       src: "/buyvideo.gif",
     },
-    "Important announcement!",
+    "$MTGOX +0.21%",
     {
       type: "image",
       src: "/xbt.png",
     },
-    "XBT2100",
+    "$ETH -147%",
     {
       type: "image",
       src: "/buyvideo.gif",
@@ -97,22 +97,6 @@ function Ticker() {
           ))}
         </div>
       </div>
-      {/* <div className={style.hero_wrap}>
-        <div className={style.hero_first_bloc_container}>
-          <div className={style.hero_first_bloc_img_container}>
-            <Image src={vitalikAvtar} alt="" />
-          </div>
-          <div className={style.hero_first_bloc_title_container}>
-            Make Ethereum Great Again
-          </div>
-          <div className={style.hero_first_bloc_address_container}>
-            Address: 0x12318f
-          </div>
-        </div>
-        <div className={style.hero_second_bloc_container}>
-          <Image src={vitalikDance} alt="Vitalik dance" />
-        </div>
-      </div> */}
     </div>
   );
 }
