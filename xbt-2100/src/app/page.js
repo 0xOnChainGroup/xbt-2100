@@ -263,7 +263,7 @@ export default function Home() {
                           type="text"
                           name="search"
                           // value=""
-                          defaultValue="0x2313213132123131321"
+                          defaultValue="0x303897828FBbce53FdDa62CAeC5F516686d97104"
                           style={{ width: "190px", padding:"5px" }}
                           onClick={handleInputClick}
                         />
