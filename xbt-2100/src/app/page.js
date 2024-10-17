@@ -77,6 +77,7 @@ export default function Home() {
     };
   }, [isDragging]);
   useEffect(() => {
+    window.scrollTo(0, 0); 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -123,7 +124,7 @@ export default function Home() {
                   ref={socialsRef}
                     onMouseDown={handleMouseDown}
                     style={{ cursor: "move" }}
-                    className="socials-container"
+                    className="socials-container shake"
                   >
                     <div className="socials-wrap">
                       <div className="socials-title">XBT Socials</div>
@@ -175,44 +176,6 @@ export default function Home() {
                     style={{ margin: "2px" }}
                     alt=""
                   />
-                </td>
-              </tr>
-            </thead>
-          </table>
-          <table width="100%" cellPadding="0" cellSpacing="0" border="0">
-            <thead>
-              <tr>
-                <td className="titlebg2" height="32" align="right">
-                  <span className="smalltext">
-                    October 15, 2024, 02:35:39 PM
-                  </span>
-                  <a
-                    href="#"
-                    // onClick="shrinkHeader(!current_header); return false;"
-                  >
-                    <img
-                      id="upshrink"
-                      src="https://bitcointalk.org/Themes/custom1/images/upshrink.gif"
-                      alt="*"
-                      title="Shrink or expand the header."
-                      align="bottom"
-                      style={{ margin: "0 1ex" }}
-                    />
-                  </a>
-                </td>
-              </tr>
-            </thead>
-            <thead>
-              <tr id="upshrinkHeader">
-                <td valign="top" colSpan="2">
-                  <table
-                    width="100%"
-                    className="bordercolor"
-                    cellPadding="8"
-                    cellSpacing="1"
-                    border="0"
-                    style={{ marginTop: "1px" }}
-                  ></table>
                 </td>
               </tr>
             </thead>
@@ -919,16 +882,16 @@ export default function Home() {
                           <tr>
                             <td className="middletext" valign="top">
                               <b>
-                                <a href="https://bitcointalk.org/index.php?topic=5513264.msg64636540;topicseen#msg64636540">
+                                <a href="">
                                   Re: Betplays.com scam casino
                                 </a>
                               </b>{" "}
                               by{" "}
-                              <a href="https://bitcointalk.org/index.php?action=profile;u=2790812">
+                              <a href="">
                                 Betesports
                               </a>{" "}
                               (
-                              <a href="https://bitcointalk.org/index.php?board=83.0">
+                              <a href="">
                                 Scam Accusations
                               </a>
                               )
@@ -962,7 +925,7 @@ export default function Home() {
                       valign="middle"
                       align="center"
                     >
-                      <a href="https://bitcointalk.org/index.php?action=stats">
+                      <a href="">
                         <img
                           src="https://bitcointalk.org/Themes/custom1/images/icons/info.gif"
                           alt="Forum Stats"
@@ -975,7 +938,7 @@ export default function Home() {
                         Latest Member:{" "}
                         <b>
                           {" "}
-                          <a href="https://bitcointalk.org/index.php?action=profile;u=3660308">
+                          <a href="">
                             Rdavis2478
                           </a>
                         </b>
@@ -983,7 +946,7 @@ export default function Home() {
                         <b>
                           &quot;
                           <a
-                            href="https://bitcointalk.org/index.php?topic=5501796.msg64636554#new"
+                            href=""
                             title="Re:  &#128293; CLOUDBLAST.IO / AMD Epyc VPS &#9729;&#65039; 10 Gbps&#9729;&#65039; DDoS Protection &#9729;&#65039; Hourly Billing"
                           >
                             Re: &#128293; CLOUDBLAST.IO / A...
@@ -991,11 +954,11 @@ export default function Home() {
                           &quot;
                         </b>{" "}
                         ( <b>Today</b> at 02:35:28 PM )<br />
-                        <a href="https://bitcointalk.org/index.php?action=recent">
+                        <a href="">
                           View the most recent posts on the forum.
                         </a>
                         <br />
-                        <a href="https://bitcointalk.org/index.php?action=stats">
+                        <a href="">
                           [More Stats]
                         </a>
                       </span>
@@ -1022,7 +985,7 @@ export default function Home() {
             <thead>
               <tr>
                 <td width="28%" valign="middle" align="right">
-                  <a href="http://www.mysql.com/" target="_blank">
+                  <a href="" target="_blank">
                     <img
                       id="powered-mysql"
                       src="https://bitcointalk.org/Themes/custom1/images/powered-mysql.gif"
@@ -1034,7 +997,7 @@ export default function Home() {
                       //   onmouseout="smfFooterHighlight(this, false);"
                     />
                   </a>
-                  <a href="http://www.php.net/" target="_blank">
+                  <a href="" target="_blank">
                     <img
                       id="powered-php"
                       src="https://bitcointalk.org/Themes/custom1/images/powered-php.gif"
@@ -1079,7 +1042,7 @@ export default function Home() {
                 </td>
                 <td width="28%" valign="middle" align="left">
                   <a
-                    href="http://validator.w3.org/check/referer"
+                    href=""
                     target="_blank"
                   >
                     <img
@@ -1094,7 +1057,7 @@ export default function Home() {
                     />
                   </a>
                   <a
-                    href="http://jigsaw.w3.org/css-validator/check/referer"
+                    href=""
                     target="_blank"
                   >
                     <img
