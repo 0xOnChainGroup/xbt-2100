@@ -10,6 +10,9 @@ import Ticker from "./components/Ticker/Ticker";
 export default function Home() {
   const [isEnterClicked, setIsEnterClicked] = useState();
   const [isInputClicked, setIsInputClicked] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const socialsRef = useRef(null);
   const audioRef = useRef(null);
   const inputRef = useRef(null);
   const dropdownRef = useRef(null);
@@ -37,7 +40,25 @@ export default function Home() {
       setIsInputClicked(false);
     }
   };
-
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setOffset({
+      x: e.clientX - socialsRef.current.getBoundingClientRect().left,
+      y: e.clientY - socialsRef.current.getBoundingClientRect().top,
+    });
+  };
+  const handleMouseMove = (e) => {
+    if (isDragging) {
+      const newX = e.clientX - offset.x;
+      const newY = e.clientY - offset.y;
+      socialsRef.current.style.left = `${newX}px`;
+      socialsRef.current.style.top = `${newY}px`;
+      socialsRef.current.style.position = "fixed";
+    }
+  };
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
   useEffect(() => {
     if (isEnterClicked && videoRef.current) {
       videoRef.current.play();
@@ -46,7 +67,15 @@ export default function Home() {
       document.body.style.overflow = "scroll";
     }
   }, [isEnterClicked]);
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
 
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [isDragging]);
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -90,7 +119,12 @@ export default function Home() {
                   </span>
                 </td>
                 <td className="catbg">
-                  <div className="socials-container">
+                  <div
+                  ref={socialsRef}
+                    onMouseDown={handleMouseDown}
+                    style={{ cursor: "move" }}
+                    className="socials-container"
+                  >
                     <div className="socials-wrap">
                       <div className="socials-title">XBT Socials</div>
                       <button className="socials-button"></button>
