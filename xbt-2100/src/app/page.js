@@ -165,7 +165,7 @@ export default function Home() {
                       </div>
                       <div
                         onClick={() =>
-                          window.open("http://dexscreener.com/eth", "blank")
+                          window.open("https://dexscreener.com/ethereum/0x303897828FBbce53FdDa62CAeC5F516686d97104", "blank")
                         }
                         className="socials-list-item"
                       >
@@ -176,7 +176,7 @@ export default function Home() {
 
                     <div className="socials-buy-button-container">
                       <div
-                        onClick={() => window.open("https://app.uniswap.com/")}
+                        onClick={() => window.open("https://app.uniswap.org/swap?outputCurrency=0x303897828FBbce53FdDa62CAeC5F516686d97104&chain=ethereum")}
                         className="socials-buy-button"
                       >
                         <p>BUY</p>
@@ -272,7 +272,7 @@ export default function Home() {
                             ref={dropdownRef}
                             onClick={() =>
                               window.open(
-                                "https://dexscreener.com/eth/",
+                                "https://dexscreener.com/ethereum/0x303897828FBbce53FdDa62CAeC5F516686d97104",
                                 "_blank"
                               )
                             }
