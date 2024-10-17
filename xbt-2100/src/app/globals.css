@@ -871,6 +871,7 @@ background-color: silver;
 height: 100px;
 /* width: 100%; */
 width: fit-content;
+border: solid 1px black;
 }
 .socials-wrap{
 	display: flex;
