@@ -5,7 +5,7 @@
   src: url("../../public//Font/ARCADECLASSIC.TTF");
 }
 body {
-  cursor: url("../../public/idees_curseur_1_up32x32.png"), auto !important;
+  cursor: url("../../public/idees_curseur_1_up32x32.png") 16 16, auto !important;
 }
 button,
 a,
@@ -14,7 +14,7 @@ textarea,
 select,
 *:hover,
 *:focus {
-  cursor: url("../../public/idees_curseur_1_up32x32.png"), auto !important;
+  cursor: url("../../public/idees_curseur_1_up32x32.png")16 16, auto !important;
 }
 .falling-image {
   position: absolute;
