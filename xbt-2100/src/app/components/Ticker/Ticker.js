@@ -8,7 +8,7 @@ function Ticker() {
     "$BTC -99%",
     {
       type: "image",
-      src: "/inithforthetech.png.png",
+      src: "/inithforthetech.png",
     },
     "$XBT +2100%",
     {
@@ -33,7 +33,7 @@ function Ticker() {
     "$XBT +2100%",
     {
       type: "image",
-      src: "/buyvideo.gif",
+      src: "/pokemon-card.png",
     },
     "$MTGOX +0.21%",
     {

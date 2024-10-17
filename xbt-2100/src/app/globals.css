@@ -866,3 +866,75 @@ img.unloaded[alt=""]{background-image:url("/Themes/throb.gif"); background-repea
 .input-dropdown:hover{
 background-color: #ECEDF3;
 }
+.socials-container{
+background-color: silver;
+height: 100px;
+/* width: 100%; */
+width: fit-content;
+}
+.socials-wrap{
+	display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, navy, #1084d0);
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 2px 3px 3px;
+    cursor: move !important;
+    -webkit-font-smoothing: none;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 11px;
+}
+.socials-title{
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-right: 24px;
+}
+.socials-button{
+    background-image: url('/questionmark.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+	width: 15px;
+	height: 15px;
+}
+.socials-content-container{
+display: flex;
+
+}
+.socials-list-item{
+	padding: 5px;
+	display: flex;
+	font-weight: 200;
+	color: black;
+	font-family: 'Courier New', Courier, monospace;
+	text-decoration: underline;
+	/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+.socials-list-item img{
+	height: 14px;
+	padding-right: 5px;
+}
+.socials-buy-button-container{
+	width: 100%;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+.socials-buy-button{
+display: flex;
+justify-content: center;
+align-items: center;
+color: black;
+font-family: 'Courier New', Courier, monospace;
+
+font-weight: 200;
+width: 80%;
+height: 40px;
+text-decoration: underline;
+background: silver;
+border: none;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+.socials-buy-button p{
+font-size: 21px;
+}

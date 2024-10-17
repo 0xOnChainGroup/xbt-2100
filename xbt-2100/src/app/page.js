@@ -28,7 +28,12 @@ export default function Home() {
     setIsInputClicked(!isInputClicked);
   }
   const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target) && inputRef.current && !inputRef.current.contains(event.target)) {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target) &&
+      inputRef.current &&
+      !inputRef.current.contains(event.target)
+    ) {
       setIsInputClicked(false);
     }
   };
@@ -41,7 +46,7 @@ export default function Home() {
       document.body.style.overflow = "scroll";
     }
   }, [isEnterClicked]);
-  
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -83,6 +88,52 @@ export default function Home() {
                     />
                     {/* XBT - 2100 */}
                   </span>
+                </td>
+                <td className="catbg">
+                  <div className="socials-container">
+                    <div className="socials-wrap">
+                      <div className="socials-title">XBT Socials</div>
+                      <button className="socials-button"></button>
+                    </div>
+                    <div className="socials-content-container">
+                      <div
+                        onClick={() =>
+                          window.open("https://x.com/xbt2100", "_blank")
+                        }
+                        className="socials-list-item"
+                      >
+                        <img src="/directory.png" alt="" />
+                        <div>Twitter</div>
+                      </div>
+                      <div
+                        onClick={() =>
+                          window.open("http://t.me/XBT2100Portal", "blank")
+                        }
+                        className="socials-list-item"
+                      >
+                        <img src="/directory.png" alt="" />
+                        <div>Telegram</div>
+                      </div>
+                      <div
+                        onClick={() =>
+                          window.open("http://dexscreener.com/eth", "blank")
+                        }
+                        className="socials-list-item"
+                      >
+                        <img src="/directory.png" alt="" />
+                        <div>Dexscreener</div>
+                      </div>
+                    </div>
+
+                    <div className="socials-buy-button-container">
+                      <div
+                        onClick={() => window.open("https://app.uniswap.com/")}
+                        className="socials-buy-button"
+                      >
+                        <p>BUY</p>
+                      </div>
+                    </div>
+                  </div>
                 </td>
                 <td align="right" className="catbg">
                   <img
@@ -127,8 +178,7 @@ export default function Home() {
                     cellSpacing="1"
                     border="0"
                     style={{ marginTop: "1px" }}
-                  >
-                  </table>
+                  ></table>
                 </td>
               </tr>
             </thead>
@@ -193,7 +243,7 @@ export default function Home() {
                           style={{ width: "190px" }}
                           onClick={handleInputClick}
                         />
-                        {isInputClicked && ( 
+                        {isInputClicked && (
                           <div
                             ref={dropdownRef}
                             onClick={() =>
@@ -268,7 +318,6 @@ export default function Home() {
         <div className="video-container">
           <video
             ref={videoRef}
-            
             autoPlay={false}
             loop
             preload="auto"
@@ -294,10 +343,7 @@ export default function Home() {
                     }}
                   >
                     <b>
-                      <a
-                        href=""
-                        className="nav"
-                      >
+                      <a href="" className="nav">
                         XBT 2100
                       </a>
                     </b>
@@ -340,10 +386,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2">
                     <b>
-                      <a
-                        href=""
-                        name="b1"
-                      >
+                      <a href="" name="b1">
                         XBT 2100
                       </a>
                     </b>
@@ -356,10 +399,7 @@ export default function Home() {
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderator:{" "}
-                        <a
-                          href=""
-                          title="Board Moderator"
-                        >
+                        <a href="" title="Board Moderator">
                           Len Sassaman aka 'Satoshi Nakamoto'
                         </a>
                       </i>
@@ -378,10 +418,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
-                      <b>Last post</b> by{" "}
-                      <a href="">
-                        tranthidung
-                      </a>
+                      <b>Last post</b> by <a href="">tranthidung</a>
                       <br />
                       in{" "}
                       <a
@@ -422,10 +459,7 @@ export default function Home() {
                         Meetups
                       </a>
                       ,{" "}
-                      <a
-                        href=""
-                        title="No New Posts (Topics: 54, Posts: 129)"
-                      >
+                      <a href="" title="No New Posts (Topics: 54, Posts: 129)">
                         Important Announcements
                       </a>
                     </span>
@@ -451,29 +485,22 @@ export default function Home() {
                   </td>
                   <td className="windowbg2">
                     <b>
-                      <a
-                        href=""
-                        name="b6"
-                      >
+                      <a href="" name="b6">
                         MT Gox announce 2100 listing soon!
                       </a>
                     </b>
                     <br />
-                    One of the strongest and most reliable crypto exchange announced in presence of Donald Trump, they will list XBT2100.
+                    One of the strongest and most reliable crypto exchange
+                    announced in presence of Donald Trump, they will list
+                    XBT2100.
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderators:{" "}
-                        <a
-                          href=""
-                          title="Board Moderator"
-                        >
+                        <a href="" title="Board Moderator">
                           Karpelès
                         </a>
                         ,{" "}
-                        <a
-                          href=""
-                          title="Board Moderator"
-                        >
+                        <a href="" title="Board Moderator">
                           Trump
                         </a>
                       </i>
@@ -492,16 +519,10 @@ export default function Home() {
                   </td>
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
-                      <b>Last post</b> by{" "}
-                      <a href="">
-                        rionika
-                      </a>
+                      <b>Last post</b> by <a href="">rionika</a>
                       <br />
                       in{" "}
-                      <a
-                        href=""
-                        title="Re: AboutFull rbf "
-                      >
+                      <a href="" title="Re: AboutFull rbf ">
                         Re: AboutFull rbf{" "}
                       </a>
                       <br />
@@ -544,11 +565,8 @@ export default function Home() {
                   </td>
                   <td className="windowbg2">
                     <b>
-                      <a
-                        href=""
-                        name="b14"
-                      >
-                        $XBT legal tender in USA ?? Gary gensler 
+                      <a href="" name="b14">
+                        $XBT legal tender in USA ?? Gary gensler
                       </a>
                     </b>
                     <br />
@@ -556,10 +574,7 @@ export default function Home() {
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderator:{" "}
-                        <a
-                          href=""
-                          title="Board Moderator"
-                        >
+                        <a href="" title="Board Moderator">
                           gmaxwell
                         </a>
                       </i>
@@ -578,16 +593,10 @@ export default function Home() {
                   </td>
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
-                      <b>Last post</b> by{" "}
-                      <a href="">
-                        _oh_no_stop_this_
-                      </a>
+                      <b>Last post</b> by <a href="">_oh_no_stop_this_</a>
                       <br />
                       in{" "}
-                      <a
-                        href=""
-                        title="Re: Discovering Kyrgyzstan"
-                      >
+                      <a href="" title="Re: Discovering Kyrgyzstan">
                         Re: Discovering Kyrgyzst...
                       </a>
                       <br />
@@ -657,10 +666,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2">
                     <b>
-                      <a
-                        href=""
-                        name="b4"
-                      >
+                      <a href="" name="b4">
                         Bitcoin Technical Support
                       </a>
                     </b>
@@ -670,10 +676,7 @@ export default function Home() {
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderator:{" "}
-                        <a
-                          href=""
-                          title="Board Moderator"
-                        >
+                        <a href="" title="Board Moderator">
                           achow101
                         </a>
                       </i>
@@ -692,10 +695,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
-                      <b>Last post</b> by{" "}
-                      <a href="">
-                        LoyceV
-                      </a>
+                      <b>Last post</b> by <a href="">LoyceV</a>
                       <br />
                       in{" "}
                       <a
@@ -728,10 +728,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2">
                     <b>
-                      <a
-                        href=""
-                        name="b12"
-                      >
+                      <a href="" name="b12">
                         Project Development
                       </a>
                     </b>
@@ -752,10 +749,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
-                      <b>Last post</b> by{" "}
-                      <a href="">
-                        CryptoSwapTraiding
-                      </a>
+                      <b>Last post</b> by <a href="">CryptoSwapTraiding</a>
                       <br />
                       in{" "}
                       <a
@@ -805,10 +799,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2">
                     <b>
-                      <a
-                        href=""
-                        name="b67"
-                      >
+                      <a href="" name="b67">
                         Altcoin Discussion
                       </a>
                     </b>
@@ -819,10 +810,7 @@ export default function Home() {
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderator:{" "}
-                        <a
-                          href=""
-                          title="Board Moderator"
-                        >
+                        <a href="" title="Board Moderator">
                           mprep
                         </a>
                       </i>
@@ -841,10 +829,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
-                      <b>Last post</b> by{" "}
-                      <a href="">
-                        EarnOnVictor
-                      </a>
+                      <b>Last post</b> by <a href="">EarnOnVictor</a>
                       <br />
                       in{" "}
                       <a
@@ -878,10 +863,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2">
                     <b>
-                      <a
-                        href=""
-                        name="b159"
-                      >
+                      <a href="" name="b159">
                         Announcements (Altcoins)
                       </a>
                     </b>
@@ -890,17 +872,11 @@ export default function Home() {
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderators:{" "}
-                        <a
-                          href=""
-                          title="Board Moderator"
-                        >
+                        <a href="" title="Board Moderator">
                           mprep
                         </a>
                         ,{" "}
-                        <a
-                          href=""
-                          title="Board Moderator"
-                        >
+                        <a href="" title="Board Moderator">
                           Welsh
                         </a>
                       </i>
@@ -919,10 +895,7 @@ export default function Home() {
                   </td>
                   <td className="windowbg2" valign="middle" width="22%">
                     <span className="smalltext">
-                      <b>Last post</b> by{" "}
-                      <a href="">
-                        EPoolMining
-                      </a>
+                      <b>Last post</b> by <a href="">EPoolMining</a>
                       <br />
                       in{" "}
                       <a
