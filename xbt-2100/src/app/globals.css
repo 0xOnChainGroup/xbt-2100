@@ -880,6 +880,12 @@ img.unloaded[alt=""] {
 }
 
 /* Modification */
+.mute-button-container{
+	display: flex;
+	justify-content: end;
+	width: fit-content;
+	/* background-color: red; */
+}
 .mute-button-container img {
   height: 75px;
 }
@@ -1063,5 +1069,9 @@ img.unloaded[alt=""] {
 
   .sideblog-container-responsive {
     display: flex;
+  }
+  .socials-container{
+	width: 300px;
+	top: 60vh;
   }
 }

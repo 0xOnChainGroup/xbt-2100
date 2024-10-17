@@ -176,6 +176,8 @@ export default function Home() {
                   </div>
                 </td>
 
+                
+
                 <td className="catbg">
                   <div
                     onClick={handleMuteClick}
@@ -191,14 +193,6 @@ export default function Home() {
                       </>
                     )}
                   </div>
-                </td>
-
-                <td align="right" className="catbg">
-                  <img
-                    src="https://bitcointalk.org/Themes/custom1/images/smflogo.gif"
-                    style={{ margin: "2px" }}
-                    alt=""
-                  />
                 </td>
               </tr>
             </thead>
@@ -217,14 +211,14 @@ export default function Home() {
                     <b>News</b>: Latest XBT2100 Core release:{" "}
                     <a
                       className="ul"
-                      href="https://bitcoincore.org/en/download/"
+                      href=""
                     >
                       <b>28.0</b>
                     </a>{" "}
                     [
                     <a
                       className="ul"
-                      href="https://bitcointalk.org/bitcoin-28.0.torrent"
+                      href=""
                     >
                       Torrent
                     </a>
