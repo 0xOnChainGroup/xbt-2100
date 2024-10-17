@@ -954,3 +954,22 @@ font-size: 21px;
 	75% { transform: translate(-1px, 1px); }
 	100% { transform: translate(1px, 1px); }
   }
+
+
+.hero-left-column-container, .hero-right-column-container{
+	height: 60vh;
+	width: 10%;
+	margin-top: 5px;
+	/* background-color: green; */
+}
+.hero-left-column-top, .hero-right-column-top{
+height: 50%;
+/* background-color: blue; */
+}
+.hero-left-column-bottom, .hero-right-column-bottom{
+height: 50%;
+/* background-color: grey; */
+}
+ .video-container{
+display: flex;
+ }

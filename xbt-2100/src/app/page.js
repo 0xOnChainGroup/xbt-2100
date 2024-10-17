@@ -7,6 +7,7 @@ import Bitcoinlogo from "../../public/firstbitcoinlogo.png";
 import { useCustomCursor } from "../../hooks/useCustomCursor";
 import Image from "next/image";
 import Ticker from "./components/Ticker/Ticker";
+import SideBlog from "./components/SideBlog/SideBlog";
 export default function Home() {
   const [isEnterClicked, setIsEnterClicked] = useState();
   const [isInputClicked, setIsInputClicked] = useState(false);
@@ -77,7 +78,7 @@ export default function Home() {
     };
   }, [isDragging]);
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -121,7 +122,7 @@ export default function Home() {
                 </td>
                 <td className="catbg">
                   <div
-                  ref={socialsRef}
+                    ref={socialsRef}
                     onMouseDown={handleMouseDown}
                     style={{ cursor: "move" }}
                     className="socials-container shake"
@@ -312,7 +313,20 @@ export default function Home() {
             </tr>
           </thead>
         </table>
+        {/* <div className="hero-container">
+          <div className="hero-left-column-container">
+            <div className="hero-left-column-top"></div>
+            <div className="hero-left-column-bottom"></div>
+          </div> */}
         <div className="video-container">
+          <div className="hero-left-column-container">
+            <div className="hero-left-column-top">
+              <SideBlog />
+            </div>
+            <div className="hero-left-column-bottom">
+              <SideBlog />
+            </div>
+          </div>
           <video
             ref={videoRef}
             autoPlay={false}
@@ -322,9 +336,22 @@ export default function Home() {
             //   poster=""
             // height="60vh"
             src="we_are_so_fucking_back.mov"
-            style={{ width: "100%", height: "60vh", objectFit: "fill" }}
+            style={{ width: "80%", height: "60vh", objectFit: "fill", marginTop:"5px" }}
           ></video>
+          <div className="hero-right-column-container">
+            <div className="hero-right-column-top">
+              <SideBlog />
+            </div>
+            <div className="hero-right-column-bottom">
+              <SideBlog />
+            </div>
+          </div>
         </div>
+        {/* <div className="hero-right-column-container">
+            <div className="hero-right-column-top"></div>
+            <div className="hero-right-column-bottom"></div>
+          </div>
+        </div> */}
         <Ticker />
         <div id="bodyarea" style={{ padding: "1ex 0px 2ex 0px" }}>
           <table width="100%" cellPadding="0" cellSpacing="0">
@@ -489,7 +516,7 @@ export default function Home() {
                     <br />
                     One of the strongest and most reliable crypto exchange
                     announced in presence of Donald Trump, they will list
-                    XBT2100.
+                    $XBT.
                     <div style={{ paddingTop: "1px" }} className="smalltext">
                       <i>
                         Moderators:{" "}
@@ -882,19 +909,10 @@ export default function Home() {
                           <tr>
                             <td className="middletext" valign="top">
                               <b>
-                                <a href="">
-                                  Re: Betplays.com scam casino
-                                </a>
+                                <a href="">Re: Betplays.com scam casino</a>
                               </b>{" "}
-                              by{" "}
-                              <a href="">
-                                Betesports
-                              </a>{" "}
-                              (
-                              <a href="">
-                                Scam Accusations
-                              </a>
-                              )
+                              by <a href="">Betesports</a> (
+                              <a href="">Scam Accusations</a>)
                             </td>
                             <td
                               className="middletext"
@@ -938,9 +956,7 @@ export default function Home() {
                         Latest Member:{" "}
                         <b>
                           {" "}
-                          <a href="">
-                            Rdavis2478
-                          </a>
+                          <a href="">Rdavis2478</a>
                         </b>
                         <br /> Latest Post:{" "}
                         <b>
@@ -954,13 +970,9 @@ export default function Home() {
                           &quot;
                         </b>{" "}
                         ( <b>Today</b> at 02:35:28 PM )<br />
-                        <a href="">
-                          View the most recent posts on the forum.
-                        </a>
+                        <a href="">View the most recent posts on the forum.</a>
                         <br />
-                        <a href="">
-                          [More Stats]
-                        </a>
+                        <a href="">[More Stats]</a>
                       </span>
                     </td>
                   </tr>
@@ -1041,10 +1053,7 @@ export default function Home() {
                   </span>
                 </td>
                 <td width="28%" valign="middle" align="left">
-                  <a
-                    href=""
-                    target="_blank"
-                  >
+                  <a href="" target="_blank">
                     <img
                       id="valid-xhtml10"
                       src="https://bitcointalk.org/Themes/custom1/images/valid-xhtml10.gif"
@@ -1056,10 +1065,7 @@ export default function Home() {
                       //   onmouseout="smfFooterHighlight(this, false);"
                     />
                   </a>
-                  <a
-                    href=""
-                    target="_blank"
-                  >
+                  <a href="" target="_blank">
                     <img
                       id="valid-css"
                       src="https://bitcointalk.org/Themes/custom1/images/valid-css.gif"
