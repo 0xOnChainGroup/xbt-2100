@@ -264,7 +264,7 @@ export default function Home() {
                           name="search"
                           // value=""
                           defaultValue="0x303897828FBbce53FdDa62CAeC5F516686d97104"
-                          style={{ width: "190px", padding:"5px" }}
+                          style={{ width: "230px", padding:"5px" }}
                           onClick={handleInputClick}
                         />
                         {isInputClicked && (
