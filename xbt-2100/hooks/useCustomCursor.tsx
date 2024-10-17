@@ -29,7 +29,7 @@ export function useCustomCursor() {
         idRef.current += 1;
         const newPos = {
           x: e.clientX,
-          y: e.clientY,
+          y: e.clientY + window.scrollY,
           id: idRef.current,
           direction,
           type: animationCursorTypeEnum.explosion,
@@ -59,7 +59,7 @@ export function useCustomCursor() {
         const direction = Math.floor(Math.random() * 6);
         const newPos = {
           x: e.clientX,
-          y: e.clientY,
+          y: e.clientY + window.scrollY,
           id: idRef.current,
           direction,
           type: animationCursorTypeEnum.trail,
@@ -88,10 +88,10 @@ export function useCustomCursor() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   document.body.style.cursor = isMouseDown
-  //     ? "url(/idees_curseur_1_up32x32.png), help"
-  //     : 'url("/idees_curseur_1_up32x32.png"), help';
-  // }, [isMouseDown]);
+  useEffect(() => {
+    document.body.style.cursor = isMouseDown
+      ? "url(/idees_curseur_1_up32x32.png), help"
+      : 'url("/idees_curseur_1_up32x32.png"), help';
+  }, [isMouseDown]);
   return { positions };
 }
