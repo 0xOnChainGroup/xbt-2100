@@ -12,6 +12,7 @@ export default function Home() {
   const [isEnterClicked, setIsEnterClicked] = useState();
   const [isInputClicked, setIsInputClicked] = useState(false);
   const [isMuteClicked, setIsMuteClicked] = useState();
+  const [volume, setVolume] = useState(1); 
   const [isDragging, setIsDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const socialsRef = useRef(null);
@@ -64,14 +65,22 @@ export default function Home() {
   const handleMouseUp = () => {
     setIsDragging(false);
   };
+  const handleVolumeChange = (e) => {
+    const newVolume = e.target.value;
+    setVolume(newVolume);
+    if (videoRef.current) {
+      videoRef.current.volume = newVolume; // Appliquer le volume à la vidéo
+    }
+  };
   useEffect(() => {
     if (isEnterClicked && videoRef.current) {
       videoRef.current.play();
+      videoRef.current.volume = volume;
     }
     if (isEnterClicked) {
       document.body.style.overflow = "scroll";
     }
-  }, [isEnterClicked]);
+  }, [isEnterClicked, volume]);
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
@@ -340,6 +349,18 @@ export default function Home() {
             playsInline
             src="we_are_so_fucking_back.mov"
           ></video>
+          <div className="volume-control">
+            <label htmlFor="volume">Volume:</label>
+            <input
+              type="range"
+              id="volume"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={handleVolumeChange}
+            />
+          </div>
           {/* <div className="hero-right-column-container">
             <div className="hero-right-column-top">
               <SideBlog />
