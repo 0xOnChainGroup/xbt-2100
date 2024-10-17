@@ -88,10 +88,10 @@ export function useCustomCursor() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   document.body.style.cursor = isMouseDown
-  //     ? "url(/idees_curseur_1_up32x32.png) 16 16, help"
-  //     : 'url("/idees_curseur_1_up32x32.png") 16 16, help';
-  // }, [isMouseDown]);
+  useEffect(() => {
+    document.body.style.cursor = isMouseDown
+      ? "url(/idees_curseur_1_up32x32.png) 16 16, help"
+      : 'url("/idees_curseur_1_up32x32.png") 16 16, help';
+  }, [isMouseDown]);
   return { positions };
 }

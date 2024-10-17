@@ -12,7 +12,7 @@ export default function Home() {
   const [isEnterClicked, setIsEnterClicked] = useState();
   const [isInputClicked, setIsInputClicked] = useState(false);
   const [isMuteClicked, setIsMuteClicked] = useState();
-  const [volume, setVolume] = useState(1); 
+  const [volume, setVolume] = useState(0.25); 
   const [isDragging, setIsDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const socialsRef = useRef(null);
@@ -262,8 +262,9 @@ export default function Home() {
                           readOnly
                           type="text"
                           name="search"
-                          value=""
-                          style={{ width: "190px" }}
+                          // value=""
+                          defaultValue="0x2313213132123131321"
+                          style={{ width: "190px", padding:"5px" }}
                           onClick={handleInputClick}
                         />
                         {isInputClicked && (
@@ -349,17 +350,7 @@ export default function Home() {
             playsInline
             src="we_are_so_fucking_back.mov"
           ></video>
-          <div className="volume-control">
-            <label htmlFor="volume">Volume:</label>
-            <input
-              type="range"
-              id="volume"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={handleVolumeChange}
-            />
+          
           </div>
           {/* <div className="hero-right-column-container">
             <div className="hero-right-column-top">
@@ -375,6 +366,17 @@ export default function Home() {
           <SideBlog />
           <SideBlog />
         </div> */}
+        <div className="volume-control">
+            <label htmlFor="volume">Volume:</label>
+            <input
+              type="range"
+              id="volume"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={handleVolumeChange}
+            />
         <Ticker />
         <div id="bodyarea" style={{ padding: "1ex 0px 2ex 0px" }}>
           <table width="100%" cellPadding="0" cellSpacing="0">
