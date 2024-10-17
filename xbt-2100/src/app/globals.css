@@ -2,7 +2,7 @@
 	font-family: "arcade";
 	font-style: normal;
 	font-weight: 400;
-	src: url("../../public//Font/ARCADECLASSIC.ttf");
+	src: url("../../public//Font/ARCADECLASSIC.TTF");
   }
 body {
   cursor: url("../../public/idees_curseur_1_up32x32.png") 16 16, auto !important;

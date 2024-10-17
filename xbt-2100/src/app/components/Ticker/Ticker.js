@@ -10,17 +10,17 @@ function Ticker() {
       type: "image",
       src: "/xbt.png",
     },
-    "$XBT up to 2100%",
+    "$XBT +2100%",
     {
       type: "image",
       src: "/buyvideo.gif",
     },
-    "$XBT2100 up to 2100%",
+    "$XBT +2100%",
     {
       type: "image",
       src: "/xbt.png",
     },
-    "$XBT2100 up to 2100%",
+    "$XBT +2100%",
     {
       type: "image",
       src: "/buyvideo.gif",
@@ -30,7 +30,7 @@ function Ticker() {
       type: "image",
       src: "/xbt.png",
     },
-    "$XBT2100 up to 2100%",
+    "$XBT +2100%",
     {
       type: "image",
       src: "/buyvideo.gif",
